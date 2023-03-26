@@ -1,16 +1,21 @@
 import { useState, useEffect } from "react";
 
-function App() {
-  const [counter, setCounter] = useState(0);
-  const onClick = () => setCounter((prev) => prev + 1);
-  console.log("Call every time...");
+function Hello() {
   useEffect(() => {
-    console.log("Call the API...");
+    console.log("created :)");
+    return () => console.log("bye :(");
   }, []);
+  return <h1> Hello! </h1>;
+}
+
+function App() {
+  const [showing, setShowing] = useState(false);
+  const onClick = () => setShowing((prev) => !prev);
+
   return (
     <div>
-      <h1>{counter}</h1>
-      <button onClick={onClick}> Click Me! </button>
+      {showing ? <Hello /> : null}
+      <button onClick={onClick}> {showing ? "Hide" : "Show"} </button>
     </div>
   );
 }
