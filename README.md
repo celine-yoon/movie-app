@@ -18,6 +18,9 @@ A movie web service built with ReactJS
 
 ### Features
 
--
+- Fetch movies from Torrent API
+- Sort popular movies based on Torrent download counts
+- Provide the movie title, poster, genre, synopsis
+- Responsive User Interface
 
 ## Try it out
