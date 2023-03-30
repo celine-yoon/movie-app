@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
 
 function App() {
   const [todo, setTodo] = useState("");
@@ -26,6 +26,12 @@ function App() {
           placeholder=" Write your to do..."
         />
         <button type="submit">Add To Do</button>
+        <hr />
+        <ul>
+          {todos.map((item, index) => (
+            <li key={index}>{item}</li>
+          ))}
+        </ul>
       </form>
     </div>
   );
