@@ -19,8 +19,11 @@ A movie web service built with ReactJS
 ### Features
 
 - Fetch movies from Torrent API
-- Sort popular movies based on Torrent download counts
-- Provide the movie title, poster, genre, synopsis
+- Sort popular movies based on Torrent ratings
+- Provide the movie details (title, poster, genre, language, rating, synopsis, torrent download link)
+- Dynamic routes using Query parameter
 - Responsive User Interface
 
 ## Try it out
+
+[Movie App](https://celine-yoon.github.io/movie-app/)
