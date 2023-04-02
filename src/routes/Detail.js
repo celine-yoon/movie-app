@@ -5,8 +5,6 @@ function Detail() {
   const { id } = useParams();
   const [detail, setDetail] = useState([]);
 
-  console.log("detail", detail);
-
   useEffect(() => {
     const getMovies = async () => {
       const json = await (
