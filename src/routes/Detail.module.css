@@ -1,0 +1,81 @@
+.container {
+  display: flex;
+  justify-content: center;
+  height: 100%;
+  padding: 20px 100px;
+}
+
+.loader {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+  font-weight: 300;
+}
+
+.movie {
+  display: flex;
+  justify-content: center;
+  align-items: first-start;
+  align-content: center;
+  background-color: white;
+  color: #adaeb9;
+  border-radius: 5px;
+  padding: 40px 50px;
+  font-weight: 300;
+  text-decoration: none;
+  box-shadow: 0 13px 27px -5px rgba(50, 50, 93, 0.25),
+    0 8px 16px -8px rgba(0, 0, 0, 0.3), 0 -6px 16px -6px rgba(0, 0, 0, 0.025);
+}
+
+.movie__img {
+  max-width: 400px;
+  margin: 0 70px 10px 0;
+  box-shadow: 0 30px 60px -12px rgba(50, 50, 93, 0.25),
+    0 18px 36px -18px rgba(0, 0, 0, 0.3), 0 -12px 36px -8px rgba(0, 0, 0, 0.025);
+}
+
+.movie__title {
+  margin: 0 0 20px 0;
+  color: #2c2c2c;
+  text-decoration: none;
+}
+
+.movie__genres,
+.movie__torrents {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  padding: 0;
+  margin: 5px 0px;
+}
+
+.movie__genres li,
+.movie__torrents li,
+.movie__info {
+  margin-right: 10px;
+  text-decoration: none;
+}
+
+.movie__genres li {
+  border: 1px solid #adaeb9;
+  border-radius: 50px;
+  padding: 3px 5px;
+  font-size: 14px;
+}
+
+@media screen and (max-width: 1090px) {
+  .movie {
+    flex-direction: column;
+    min-width: min-content;
+    /* align-items: center; */
+    width: 100%;
+  }
+  .movie__img {
+    margin: 0;
+  }
+  .movie__title {
+    margin: 10px 0;
+  }
+}

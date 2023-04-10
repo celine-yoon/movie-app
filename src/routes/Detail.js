@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
-import { useParams, Link } from "react-router-dom";
+import { useParams } from "react-router-dom";
+import styles from "./Detail.module.css";
 
 function Detail() {
   const { id } = useParams();
@@ -19,31 +20,40 @@ function Detail() {
   }, [id]);
 
   return (
-    <div>
+    <div className={styles.container}>
       {loading ? (
-        <div>
-          <h1>Detail</h1>
-          <strong>Loading...</strong>
+        <div className={styles.loader}>
+          <span>Loading...</span>
         </div>
       ) : (
-        <div>
-          <Link to="/">Back</Link>
-          <h1>
-            {detail.title} ({detail.language})
-          </h1>
-          <h3>Rating : {detail.rating}</h3>
-          <img alt={detail.title} src={detail.large_cover_image} />
-          <p>{detail.description_full}</p>
-          <ul>
-            {detail.genres.map((genre) => (
-              <li key={genre}>{genre}</li>
-            ))}
-          </ul>
-          {detail.torrents.map((torrent) => (
-            <div key={torrent.quality}>
-              <a href={torrent.url}>[{torrent.quality}] </a>
-            </div>
-          ))}
+        <div className={styles.movie}>
+          <div>
+            <img
+              className={styles.movie__img}
+              alt={detail.title}
+              src={detail.large_cover_image}
+            />
+            <h3 className={styles.movie__info}>
+              {`${detail.year} • Rating : ${detail.rating} • Popularity : ${detail.like_count}`}
+            </h3>
+            <ul className={styles.movie__genres}>
+              {detail.genres.map((genre) => (
+                <li key={genre}>{genre}</li>
+              ))}
+            </ul>
+          </div>
+          <div>
+            <h1 className={styles.movie__title}>{detail.title}</h1>
+            <p>{detail.description_full}</p>
+            <p>{`Language : ${detail.language}`}</p>
+            <ul className={styles.movie__torrents}>
+              {detail.torrents.map((torrent) => (
+                <li key={torrent.quality}>
+                  <a href={torrent.url}>{torrent.quality} </a>
+                </li>
+              ))}
+            </ul>
+          </div>
         </div>
       )}
     </div>
