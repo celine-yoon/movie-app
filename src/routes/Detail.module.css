@@ -31,7 +31,7 @@
 
 .movie__img {
   max-width: 400px;
-  margin: 0 70px 10px 0;
+  margin: 0 50px 10px 0;
   box-shadow: 0 30px 60px -12px rgba(50, 50, 93, 0.25),
     0 18px 36px -18px rgba(0, 0, 0, 0.3), 0 -12px 36px -8px rgba(0, 0, 0, 0.025);
 }
@@ -65,11 +65,10 @@
   font-size: 14px;
 }
 
-@media screen and (max-width: 1090px) {
+@media screen and (max-width: 950px) {
   .movie {
     flex-direction: column;
     min-width: min-content;
-    /* align-items: center; */
     width: 100%;
   }
   .movie__img {
