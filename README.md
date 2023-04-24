@@ -1,8 +1,8 @@
-# Movie App
+# Movie App (Function Component)
 
 ## Description
 
-A movie web service built with ReactJS
+A movie web service built with ReactJS Function Components
 
 ### Packages
 
@@ -26,4 +26,4 @@ A movie web service built with ReactJS
 
 ## Try it out
 
-[Movie App](https://celine-yoon.github.io/movie-app/)
+[Movie App](https://celine-yoon.github.io/movie-app-function/)

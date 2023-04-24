@@ -1,5 +1,5 @@
 {
-  "name": "movie-app",
+  "name": "movie-app-function",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -40,5 +40,5 @@
       "last 1 safari version"
     ]
   },
-  "homepage": "https://celine-yoon.github.io/movie-app"
+  "homepage": "https://celine-yoon.github.io/movie-app-function"
 }
